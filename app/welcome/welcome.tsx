@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router";
 import { LanguageSwitcher } from "../components/LanguageSwitcher";
 
 const getFeatures = (t: any) => [
@@ -72,7 +73,7 @@ const getResources = (t: any) => [
     ),
   },
   {
-    href: "https://github.com/lengalabs/standard",
+    href: "/standard",
     text: t("resources.languageStandard"),
     icon: (
       <svg
@@ -150,12 +151,20 @@ export function Welcome() {
 
           {/* Call to Action */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <button className="px-8 py-3 bg-linear-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200">
+            <Link
+              to="/standard"
+              className="px-8 py-3 bg-linear-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 text-center"
+            >
               {t("common.exploreStandard")}
-            </button>
-            <button className="px-8 py-3 border-2 border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 font-medium rounded-lg hover:bg-blue-50 dark:hover:bg-blue-950/30 transition-all duration-200">
+            </Link>
+            <a
+              href="https://github.com/lengalabs"
+              target="_blank"
+              rel="noreferrer"
+              className="px-8 py-3 border-2 border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 font-medium rounded-lg hover:bg-blue-50 dark:hover:bg-blue-950/30 transition-all duration-200 text-center"
+            >
               {t("common.viewGithub")}
-            </button>
+            </a>
           </div>
         </div>
 
