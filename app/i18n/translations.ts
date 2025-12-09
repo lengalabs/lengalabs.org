@@ -33,6 +33,17 @@ export const translations = {
       description:
         "Plain text has served us well, but it's time for a change. Lenga format is designed arround the syntax tree, so it is abstracted from the accidental complexity that arises from using characters: syntax errors are impossible, no need for delimiter characters, no more discussions about indentation.",
     },
+    installation: {
+      title: "Installation",
+      extensionHeading: "Install the VS Code Extension",
+      extensionDescription:
+        "Install the official Lenga extension for VS Code to get language support and tooling.",
+      extensionCta: "View on Marketplace",
+      serverHeading: "Install the Lenga Server",
+      serverDescription: "Use Cargo to install the Lenga Server:",
+      serverCommand: "cargo install lenga",
+      serverNote: "Requires Rust and Cargo available in your PATH.",
+    },
     resources: {
       githubRepo: "GitHub Repository",
       languageStandard: "Language Standard",
@@ -72,6 +83,17 @@ export const translations = {
     vision: {
       description:
         "El texto plano nos acompañó por varias décadas, pero excedió su utilidad. El formato Lenga está diseñado alrededor del árbol de sintaxis, por lo que está abstraído de la complejidad accidental que surge al usar caracteres: los errores de sintaxis son imposibles, no hay necesidad de caracteres delimitadores, no más discusiones sobre la indentación.",
+    },
+    installation: {
+      title: "Instalación",
+      extensionHeading: "Instala la extensión de VS Code",
+      extensionDescription:
+        "Obtén la extensión oficial de Lenga para VS Code y accede a soporte e integración con el editor.",
+      extensionCta: "Abrir en Marketplace",
+      serverHeading: "Instala el servidor de Lenga",
+      serverDescription: "Usa Cargo para instalar el servidor de Lenga:",
+      serverCommand: "cargo install lenga",
+      serverNote: "Requiere tener Rust y Cargo disponibles en tu PATH.",
     },
     resources: {
       githubRepo: "Repositorio GitHub",

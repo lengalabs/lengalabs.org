@@ -1,5 +1,4 @@
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router";
 import { LanguageSwitcher } from "../components/LanguageSwitcher";
 import logoUrl from "./logo.png";
 
@@ -187,6 +186,45 @@ export function Welcome() {
           <p className="text-lg text-foreground-muted dark:text-foreground-dark-muted text-center leading-relaxed">
             {t("vision.description")}
           </p>
+        </div>
+
+        {/* Installation Section */}
+        <div className="mt-20 max-w-5xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-8 text-foreground dark:text-foreground-dark">
+            {t("installation.title")}
+          </h2>
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="bg-surface/80 dark:bg-surface-dark-muted/80 backdrop-blur-sm rounded-xl p-6 border border-border/50 dark:border-border-dark/50 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <h3 className="text-xl font-semibold mb-3 text-foreground dark:text-foreground-dark">
+                {t("installation.extensionHeading")}
+              </h3>
+              <p className="text-foreground-muted dark:text-foreground-dark-muted leading-relaxed mb-4">
+                {t("installation.extensionDescription")}
+              </p>
+              <a
+                href="https://marketplace.visualstudio.com/items?itemName=lengalabs.c-lenga"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center px-6 py-2 border-2 border-brand-600 text-brand-600 dark:text-brand-50 dark:border-brand-50 font-medium rounded-lg hover:bg-brand-50 dark:hover:bg-brand-950/30 transition-all duration-200"
+              >
+                {t("installation.extensionCta")}
+              </a>
+            </div>
+            <div className="bg-surface/80 dark:bg-surface-dark-muted/80 backdrop-blur-sm rounded-xl p-6 border border-border/50 dark:border-border-dark/50 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <h3 className="text-xl font-semibold mb-3 text-foreground dark:text-foreground-dark">
+                {t("installation.serverHeading")}
+              </h3>
+              <p className="text-foreground-muted dark:text-foreground-dark-muted leading-relaxed mb-4">
+                {t("installation.serverDescription")}
+              </p>
+              <div className="bg-brand-950/5 dark:bg-brand-500/10 rounded-lg px-4 py-3 font-mono text-sm text-foreground dark:text-foreground-dark border border-border/50 dark:border-border-dark/50">
+                <code>{t("installation.serverCommand")}</code>
+              </div>
+              <p className="mt-3 text-sm text-foreground-muted dark:text-foreground-dark-muted">
+                {t("installation.serverNote")}
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Resources */}
