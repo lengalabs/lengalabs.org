@@ -13,13 +13,13 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Standard() {
   return (
-    <div className="min-h-screen bg-linear-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-950 dark:to-blue-950">
+    <div className="min-h-screen bg-brand-50 dark:bg-surface-dark">
       <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold text-center mb-8 text-gray-900 dark:text-white">
+        <h1 className="text-4xl font-bold text-center mb-8 text-foreground dark:text-foreground-dark">
           Language Standard
         </h1>
-        <div className="max-w-4xl mx-auto bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl p-8 border border-gray-200/50 dark:border-gray-700/50">
-          <p className="text-center text-gray-600 dark:text-gray-400">
+        <div className="max-w-4xl mx-auto bg-surface/60 dark:bg-surface-dark-muted/60 backdrop-blur-sm rounded-2xl p-8 border border-border/50 dark:border-border-dark/50">
+          <p className="text-center text-foreground-subtle dark:text-foreground-dark-subtle">
             Content coming soon...
           </p>
         </div>
