@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 interface LanguageContextType {
   currentLanguage: string;
   changeLanguage: (lang: string) => void;
-  availableLanguages: { code: string; name: string; flag: string }[];
+  availableLanguages: { code: string; name: string }[];
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(
@@ -26,8 +26,8 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({
   const [currentLanguage, setCurrentLanguage] = useState(i18n.language || "en");
 
   const availableLanguages = [
-    { code: "en", name: "English", flag: "🇺🇸" },
-    { code: "es", name: "Español", flag: "🇦🇷" },
+    { code: "en", name: "English" },
+    { code: "es", name: "Español" },
   ];
 
   const changeLanguage = (lang: string) => {
