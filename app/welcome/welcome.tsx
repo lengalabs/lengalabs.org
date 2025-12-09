@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router";
 import { LanguageSwitcher } from "../components/LanguageSwitcher";
+import logoUrl from "./logo.png";
 
 const getFeatures = (t: any) => [
   {
@@ -72,50 +72,31 @@ const getResources = (t: any) => [
       </svg>
     ),
   },
+  // {
+  //   href: "/standard",
+  //   text: t("resources.languageStandard"),
+  //   icon: (
+  //     <svg
+  //       className="w-6 h-6"
+  //       fill="none"
+  //       stroke="currentColor"
+  //       viewBox="0 0 24 24"
+  //     >
+  //       <path
+  //         strokeLinecap="round"
+  //         strokeLinejoin="round"
+  //         strokeWidth={2}
+  //         d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+  //       />
+  //     </svg>
+  //   ),
+  // },
   {
-    href: "/standard",
-    text: t("resources.languageStandard"),
-    icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-        />
-      </svg>
-    ),
-  },
-  {
-    href: "https://discord.gg/lengalabs",
+    href: "https://discord.gg/ZGNFKWDM",
     text: t("resources.discordCommunity"),
     icon: (
       <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
         <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" />
-      </svg>
-    ),
-  },
-  {
-    href: "mailto:hello@lengalabs.org",
-    text: t("resources.contactUs"),
-    icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-        />
       </svg>
     ),
   },
@@ -127,7 +108,7 @@ export function Welcome() {
   const resources = getResources(t);
 
   return (
-    <main className="min-h-screen bg-linear-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-950 dark:to-blue-950">
+    <main className="min-h-screen bg-brand-50 dark:bg-surface-dark">
       {/* Language Switcher */}
       <div className="absolute top-4 right-4 z-50">
         <LanguageSwitcher />
@@ -135,36 +116,45 @@ export function Welcome() {
 
       {/* Hero Section */}
       <div className="container mx-auto px-4 pt-16 pb-8">
-        <div className="text-center max-w-4xl mx-auto">
-          <div className="mb-8">
-            <h1 className="text-6xl font-bold mb-4 bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              {t("common.title")}
-            </h1>
-            <div className="w-24 h-1 bg-linear-to-r from-blue-600 to-purple-600 mx-auto mb-6"></div>
-            <p className="text-2xl font-semibold text-gray-700 dark:text-gray-300 mb-6">
-              {t("common.motto")}
-            </p>
-            <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-3xl mx-auto">
-              {t("hero.description")}
-            </p>
-          </div>
+        <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-12 max-w-6xl mx-auto mb-8">
+          <div className="max-w-3xl w-full">
+            <div className="mb-8 text-left">
+              <h1 className="text-6xl font-bold mb-4 text-brand-600 dark:text-brand-50 text-left">
+                {t("common.title")}
+              </h1>
+              <div className="w-24 h-1 bg-brand-600 dark:bg-brand-300 mb-6"></div>
+              <p className="text-2xl font-semibold text-foreground-muted dark:text-foreground-dark-muted mb-6 text-left">
+                {t("common.motto")}
+              </p>
+              <p className="text-lg text-foreground-muted dark:text-foreground-dark-muted leading-relaxed text-left">
+                {t("hero.description")}
+              </p>
+            </div>
 
-          {/* Call to Action */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Link
-              to="/standard"
-              className="px-8 py-3 bg-linear-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 text-center"
-            >
-              {t("common.exploreStandard")}
-            </Link>
-            <a
-              href="https://github.com/lengalabs"
-              target="_blank"
-              rel="noreferrer"
-              className="px-8 py-3 border-2 border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 font-medium rounded-lg hover:bg-blue-50 dark:hover:bg-blue-950/30 transition-all duration-200 text-center"
-            >
-              {t("common.viewGithub")}
-            </a>
+            {/* Call to Action */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center sm:justify-start mb-16">
+              {/* <Link
+                to="/standard"
+                className="px-8 py-3 bg-brand-600 text-foreground-inverse font-medium rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 text-center hover:bg-brand-500 dark:bg-brand-500 dark:hover:bg-brand-300"
+              >
+                {t("common.exploreStandard")}
+              </Link> */}
+              <a
+                href="https://github.com/lengalabs"
+                target="_blank"
+                rel="noreferrer"
+                className="px-8 py-3 border-2 border-brand-600 text-brand-600 dark:text-brand-50 dark:border-brand-50 font-medium rounded-lg hover:bg-brand-50 dark:hover:bg-brand-950/30 transition-all duration-200 text-center"
+              >
+                {t("common.viewGithub")}
+              </a>
+            </div>
+          </div>
+          <div className="w-full md:w-auto flex justify-center md:justify-end">
+            <img
+              src={logoUrl}
+              alt="Lenga Labs logo"
+              className="max-w-xs md:max-w-sm lg:max-w-md h-auto drop-shadow-xl"
+            />
           </div>
         </div>
 
@@ -173,15 +163,15 @@ export function Welcome() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50 dark:border-gray-700/50"
+              className="bg-surface/80 dark:bg-surface-dark-muted/80 backdrop-blur-sm rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-border/50 dark:border-border-dark/50"
             >
-              <div className="text-blue-600 dark:text-blue-400 mb-4">
+              <div className="text-brand-600 dark:text-brand-50 mb-4">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">
+              <h3 className="text-xl font-semibold mb-3 text-foreground dark:text-foreground-dark">
                 {feature.title}
               </h3>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+              <p className="text-foreground-muted dark:text-foreground-dark-muted leading-relaxed">
                 {feature.description}
               </p>
             </div>
@@ -189,36 +179,75 @@ export function Welcome() {
         </div>
 
         {/* Vision Section */}
-        <div className="mt-20 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl p-8 border border-gray-200/50 dark:border-gray-700/50 max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-6 text-gray-900 dark:text-white">
+        <div className="mt-20 bg-surface/60 dark:bg-surface-dark-muted/60 backdrop-blur-sm rounded-2xl p-8 border border-border/50 dark:border-border-dark/50 max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-6 text-foreground dark:text-foreground-dark">
             {t("common.futureOfCode")}
           </h2>
-          <p className="text-lg text-gray-700 dark:text-gray-300 text-center leading-relaxed">
+          <p className="text-lg text-foreground-muted dark:text-foreground-dark-muted text-center leading-relaxed">
             {t("vision.description")}
           </p>
         </div>
 
+        {/* Installation Section */}
+        <div className="mt-20 max-w-5xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-8 text-foreground dark:text-foreground-dark">
+            {t("installation.title")}
+          </h2>
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="bg-surface/80 dark:bg-surface-dark-muted/80 backdrop-blur-sm rounded-xl p-6 border border-border/50 dark:border-border-dark/50 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <h3 className="text-xl font-semibold mb-3 text-foreground dark:text-foreground-dark">
+                {t("installation.extensionHeading")}
+              </h3>
+              <p className="text-foreground-muted dark:text-foreground-dark-muted leading-relaxed mb-4">
+                {t("installation.extensionDescription")}
+              </p>
+              <a
+                href="https://marketplace.visualstudio.com/items?itemName=lengalabs.c-lenga"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center px-6 py-2 border-2 border-brand-600 text-brand-600 dark:text-brand-50 dark:border-brand-50 font-medium rounded-lg hover:bg-brand-50 dark:hover:bg-brand-950/30 transition-all duration-200"
+              >
+                {t("installation.extensionCta")}
+              </a>
+            </div>
+            <div className="bg-surface/80 dark:bg-surface-dark-muted/80 backdrop-blur-sm rounded-xl p-6 border border-border/50 dark:border-border-dark/50 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <h3 className="text-xl font-semibold mb-3 text-foreground dark:text-foreground-dark">
+                {t("installation.serverHeading")}
+              </h3>
+              <p className="text-foreground-muted dark:text-foreground-dark-muted leading-relaxed mb-4">
+                {t("installation.serverDescription")}
+              </p>
+              <div className="bg-brand-950/5 dark:bg-brand-500/10 rounded-lg px-4 py-3 font-mono text-sm text-foreground dark:text-foreground-dark border border-border/50 dark:border-border-dark/50">
+                <code>{t("installation.serverCommand")}</code>
+              </div>
+              <p className="mt-3 text-sm text-foreground-muted dark:text-foreground-dark-muted">
+                {t("installation.serverNote")}
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* Resources */}
         <div className="mt-16 max-w-2xl mx-auto">
-          <h3 className="text-2xl font-bold text-center mb-8 text-gray-900 dark:text-white">
+          <h3 className="text-2xl font-bold text-center mb-8 text-foreground dark:text-foreground-dark">
             {t("common.getInvolved")}
           </h3>
           <div className="grid gap-4">
             {resources.map(({ href, text, icon }) => (
               <a
                 key={href}
-                className="group flex items-center gap-4 p-4 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg border border-gray-200/50 dark:border-gray-700/50 hover:shadow-lg transition-all duration-200 hover:border-blue-300 dark:hover:border-blue-600"
+                className="group flex items-center gap-4 p-4 bg-surface/80 dark:bg-surface-dark-muted/80 backdrop-blur-sm rounded-lg border border-border/50 dark:border-border-dark/50 hover:shadow-lg transition-all duration-200 hover:border-brand-500 dark:hover:border-brand-500"
                 href={href}
                 target="_blank"
                 rel="noreferrer"
               >
-                <div className="text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform duration-200">
+                <div className="text-brand-600 dark:text-brand-50 group-hover:scale-110 transition-transform duration-200">
                   {icon}
                 </div>
-                <span className="text-gray-900 dark:text-white font-medium group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
+                <span className="text-foreground dark:text-foreground-dark font-medium group-hover:text-brand-600 dark:group-hover:text-brand-300 transition-colors duration-200">
                   {text}
                 </span>
-                <div className="ml-auto text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
+                <div className="ml-auto text-foreground-muted group-hover:text-brand-600 dark:group-hover:text-brand-300 transition-colors duration-200">
                   <svg
                     className="w-5 h-5"
                     fill="none"

@@ -1,7 +1,7 @@
 export const translations = {
   en: {
     common: {
-      title: "LengaLabs.org",
+      title: "Lenga",
       motto: "Write code, not text",
       exploreStandard: "Explore the Standard",
       viewGithub: "View on GitHub",
@@ -10,7 +10,7 @@ export const translations = {
     },
     hero: {
       description:
-        "An open source organization developing a revolutionary new standard for source code representation. Our AST-based format replaces traditional plain text files, enabling a new era of intelligent code development.",
+        "A new paradigm for source code representation. Syntax tree based serialization, optimized for parsing.",
     },
     features: {
       astFormat: {
@@ -31,18 +31,28 @@ export const translations = {
     },
     vision: {
       description:
-        "Imagine code that understands itself. Where syntax errors are impossible, where refactoring is instant, and where the structure of your program is as important as its logic. This is the vision of LengaLabs - transforming how we write, read, and think about code.",
+        "Plain text has served us well, but it's time for a change. Lenga format is designed arround the syntax tree, so it is abstracted from the accidental complexity that arises from using characters: syntax errors are impossible, no need for delimiter characters, no more discussions about indentation.",
+    },
+    installation: {
+      title: "Installation",
+      extensionHeading: "Install the VS Code Extension",
+      extensionDescription:
+        "Install the official Lenga extension for VS Code to get language support and tooling.",
+      extensionCta: "View on Marketplace",
+      serverHeading: "Install the Lenga Server",
+      serverDescription: "Use Cargo to install the Lenga Server:",
+      serverCommand: "cargo install lenga",
+      serverNote: "Requires Rust and Cargo available in your PATH.",
     },
     resources: {
       githubRepo: "GitHub Repository",
       languageStandard: "Language Standard",
       discordCommunity: "Join Discord Community",
-      contactUs: "Contact Us",
     },
   },
   es: {
     common: {
-      title: "LengaLabs.org",
+      title: "Lenga",
       motto: "Escribe código, no texto",
       exploreStandard: "Explorar el Estándar",
       viewGithub: "Ver en GitHub",
@@ -72,13 +82,23 @@ export const translations = {
     },
     vision: {
       description:
-        "Imagina código que se entiende a sí mismo. Donde los errores de sintaxis son imposibles, donde la refactorización es instantánea, y donde la estructura de tu programa es tan importante como su lógica. Esta es la visión de LengaLabs - transformando cómo escribimos, leemos y pensamos sobre el código.",
+        "El texto plano nos acompañó por varias décadas, pero excedió su utilidad. El formato Lenga está diseñado alrededor del árbol de sintaxis, por lo que está abstraído de la complejidad accidental que surge al usar caracteres: los errores de sintaxis son imposibles, no hay necesidad de caracteres delimitadores, no más discusiones sobre la indentación.",
+    },
+    installation: {
+      title: "Instalación",
+      extensionHeading: "Instala la extensión de VS Code",
+      extensionDescription:
+        "Obtén la extensión oficial de Lenga para VS Code y accede a soporte e integración con el editor.",
+      extensionCta: "Abrir en Marketplace",
+      serverHeading: "Instala el servidor de Lenga",
+      serverDescription: "Usa Cargo para instalar el servidor de Lenga:",
+      serverCommand: "cargo install lenga",
+      serverNote: "Requiere tener Rust y Cargo disponibles en tu PATH.",
     },
     resources: {
       githubRepo: "Repositorio GitHub",
       languageStandard: "Estándar del Lenguaje",
       discordCommunity: "Únete a la Comunidad Discord",
-      contactUs: "Contáctanos",
     },
   },
 };

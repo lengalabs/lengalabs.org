@@ -7,7 +7,7 @@ export function meta({}: Route.MetaArgs) {
     {
       name: "description",
       content:
-        "Open source organization developing a revolutionary AST-based standard for source code representation. Replacing plain text with intelligent, structure-aware code formats.",
+        "Open source AST-based standard for source code representation. Replacing plain text with intelligent, structure-aware code format.",
     },
     {
       name: "keywords",
@@ -17,8 +17,7 @@ export function meta({}: Route.MetaArgs) {
     { property: "og:title", content: "LengaLabs.org - Write Code, Not Text" },
     {
       property: "og:description",
-      content:
-        "Revolutionary AST-based standard for source code representation",
+      content: "AST-based standard for source code representation",
     },
     { property: "og:type", content: "website" },
   ];
