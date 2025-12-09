@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 import { LanguageSwitcher } from "../components/LanguageSwitcher";
+import logoUrl from "./logo.png";
 
 const getFeatures = (t: any) => [
   {
@@ -116,36 +117,45 @@ export function Welcome() {
 
       {/* Hero Section */}
       <div className="container mx-auto px-4 pt-16 pb-8">
-        <div className="text-center max-w-4xl mx-auto">
-          <div className="mb-8">
-            <h1 className="text-6xl font-bold mb-4 text-brand-600 dark:text-brand-300">
-              {t("common.title")}
-            </h1>
-            <div className="w-24 h-1 bg-brand-600 dark:bg-brand-300 mx-auto mb-6"></div>
-            <p className="text-2xl font-semibold text-foreground-muted dark:text-foreground-dark-muted mb-6">
-              {t("common.motto")}
-            </p>
-            <p className="text-lg text-foreground-subtle dark:text-foreground-dark-subtle leading-relaxed max-w-3xl mx-auto">
-              {t("hero.description")}
-            </p>
-          </div>
+        <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-12 max-w-6xl mx-auto mb-8">
+          <div className="max-w-3xl w-full">
+            <div className="mb-8 text-left">
+              <h1 className="text-6xl font-bold mb-4 text-brand-600 dark:text-brand-300 text-left">
+                {t("common.title")}
+              </h1>
+              <div className="w-24 h-1 bg-brand-600 dark:bg-brand-300 mb-6"></div>
+              <p className="text-2xl font-semibold text-foreground-muted dark:text-foreground-dark-muted mb-6 text-left">
+                {t("common.motto")}
+              </p>
+              <p className="text-lg text-foreground-subtle dark:text-foreground-dark-subtle leading-relaxed text-left">
+                {t("hero.description")}
+              </p>
+            </div>
 
-          {/* Call to Action */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Link
-              to="/standard"
-              className="px-8 py-3 bg-brand-600 text-foreground-inverse font-medium rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 text-center hover:bg-brand-500 dark:bg-brand-500 dark:hover:bg-brand-300"
-            >
-              {t("common.exploreStandard")}
-            </Link>
-            <a
-              href="https://github.com/lengalabs"
-              target="_blank"
-              rel="noreferrer"
-              className="px-8 py-3 border-2 border-brand-600 text-brand-600 dark:text-brand-300 dark:border-brand-300 font-medium rounded-lg hover:bg-brand-50 dark:hover:bg-brand-950/30 transition-all duration-200 text-center"
-            >
-              {t("common.viewGithub")}
-            </a>
+            {/* Call to Action */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center sm:justify-start mb-16">
+              <Link
+                to="/standard"
+                className="px-8 py-3 bg-brand-600 text-foreground-inverse font-medium rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 text-center hover:bg-brand-500 dark:bg-brand-500 dark:hover:bg-brand-300"
+              >
+                {t("common.exploreStandard")}
+              </Link>
+              <a
+                href="https://github.com/lengalabs"
+                target="_blank"
+                rel="noreferrer"
+                className="px-8 py-3 border-2 border-brand-600 text-brand-600 dark:text-brand-300 dark:border-brand-300 font-medium rounded-lg hover:bg-brand-50 dark:hover:bg-brand-950/30 transition-all duration-200 text-center"
+              >
+                {t("common.viewGithub")}
+              </a>
+            </div>
+          </div>
+          <div className="w-full md:w-auto flex justify-center md:justify-end">
+            <img
+              src={logoUrl}
+              alt="Lenga Labs logo"
+              className="max-w-xs md:max-w-sm lg:max-w-md h-auto drop-shadow-xl"
+            />
           </div>
         </div>
 
