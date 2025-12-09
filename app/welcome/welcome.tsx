@@ -120,14 +120,14 @@ export function Welcome() {
         <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-12 max-w-6xl mx-auto mb-8">
           <div className="max-w-3xl w-full">
             <div className="mb-8 text-left">
-              <h1 className="text-6xl font-bold mb-4 text-brand-600 dark:text-brand-300 text-left">
+              <h1 className="text-6xl font-bold mb-4 text-brand-600 dark:text-brand-50 text-left">
                 {t("common.title")}
               </h1>
               <div className="w-24 h-1 bg-brand-600 dark:bg-brand-300 mb-6"></div>
               <p className="text-2xl font-semibold text-foreground-muted dark:text-foreground-dark-muted mb-6 text-left">
                 {t("common.motto")}
               </p>
-              <p className="text-lg text-foreground-subtle dark:text-foreground-dark-subtle leading-relaxed text-left">
+              <p className="text-lg text-foreground-muted dark:text-foreground-dark-muted leading-relaxed text-left">
                 {t("hero.description")}
               </p>
             </div>
@@ -144,7 +144,7 @@ export function Welcome() {
                 href="https://github.com/lengalabs"
                 target="_blank"
                 rel="noreferrer"
-                className="px-8 py-3 border-2 border-brand-600 text-brand-600 dark:text-brand-300 dark:border-brand-300 font-medium rounded-lg hover:bg-brand-50 dark:hover:bg-brand-950/30 transition-all duration-200 text-center"
+                className="px-8 py-3 border-2 border-brand-600 text-brand-600 dark:text-brand-50 dark:border-brand-50 font-medium rounded-lg hover:bg-brand-50 dark:hover:bg-brand-950/30 transition-all duration-200 text-center"
               >
                 {t("common.viewGithub")}
               </a>
@@ -166,13 +166,13 @@ export function Welcome() {
               key={index}
               className="bg-surface/80 dark:bg-surface-dark-muted/80 backdrop-blur-sm rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-border/50 dark:border-border-dark/50"
             >
-              <div className="text-brand-600 dark:text-brand-300 mb-4">
+              <div className="text-brand-600 dark:text-brand-50 mb-4">
                 {feature.icon}
               </div>
               <h3 className="text-xl font-semibold mb-3 text-foreground dark:text-foreground-dark">
                 {feature.title}
               </h3>
-              <p className="text-foreground-subtle dark:text-foreground-dark-subtle leading-relaxed">
+              <p className="text-foreground-muted dark:text-foreground-dark-muted leading-relaxed">
                 {feature.description}
               </p>
             </div>
@@ -203,13 +203,13 @@ export function Welcome() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <div className="text-brand-600 dark:text-brand-300 group-hover:scale-110 transition-transform duration-200">
+                <div className="text-brand-600 dark:text-brand-50 group-hover:scale-110 transition-transform duration-200">
                   {icon}
                 </div>
                 <span className="text-foreground dark:text-foreground-dark font-medium group-hover:text-brand-600 dark:group-hover:text-brand-300 transition-colors duration-200">
                   {text}
                 </span>
-                <div className="ml-auto text-foreground-subtle group-hover:text-brand-600 dark:group-hover:text-brand-300 transition-colors duration-200">
+                <div className="ml-auto text-foreground-muted group-hover:text-brand-600 dark:group-hover:text-brand-300 transition-colors duration-200">
                   <svg
                     className="w-5 h-5"
                     fill="none"
