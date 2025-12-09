@@ -93,7 +93,7 @@ const getResources = (t: any) => [
     ),
   },
   {
-    href: "https://discord.gg/lengalabs",
+    href: "https://discord.gg/ZGNFKWDM",
     text: t("resources.discordCommunity"),
     icon: (
       <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
